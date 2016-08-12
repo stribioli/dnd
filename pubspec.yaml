@@ -1,10 +1,7 @@
 name: dnd
 version: 0.3.2
-author: Marco Jakob <majakob@gmx.ch>
+authors:
+  - Marco Jakob <majakob@gmx.ch>
+  - Stefano Tribioli <tribioli.stefano@gmail.com>
 description: Drag and Drop for Dart web apps with mouse and touch support.
-homepage: http://code.makery.ch/library/dart-drag-and-drop/
-documentation: http://www.dartdocs.org/documentation/dnd/latest/
-dependencies:
-  browser: '>=0.10.0+2 <0.11.0'
-dev_dependencies:
-  polymer: '>=0.15.1 <0.16.0'
+homepage: https://github.com/sassospicco/dnd/
