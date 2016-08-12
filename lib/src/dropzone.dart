@@ -81,7 +81,7 @@ class Dropzone {
   /// Flag indicating that a child of the [_currentOverElement] is entered.
   /// This means that a dragLeave event for the parent will be fired. So, if
   /// this flag is true we must ignore the next dragLeave event.
-  bool _childOfCurrentOverElementEntered = false;
+  // bool _childOfCurrentOverElementEntered = false;
 
   /// Creates a new [Dropzone] for [elementOrElementList]. The
   /// [elementOrElementList] must be of type [Element] or [ElementList].
