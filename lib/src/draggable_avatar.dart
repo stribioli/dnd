@@ -211,7 +211,7 @@ class CloneAvatarHandler extends AvatarHandler {
 
     // Set the initial position of avatar (relative to the closest positioned
     // ancestor).
-    setLeftTop(draggable.offset.topLeft);
+    setLeftTop(draggable.getBoundingClientRect().topLeft);
   }
 
   @override
