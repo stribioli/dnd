@@ -167,6 +167,11 @@ abstract class _EventManager {
       return false;
     }
 
+    // If a guard is specified, check its value
+    if (drg.guard != null && !drg.guard(target)) {
+      return false;
+    }
+
     // If handle is specified, drag must start on handle or one of its children.
     if (drg.handle != null) {
       if (target is Element) {

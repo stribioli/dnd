@@ -6,6 +6,9 @@ part of dnd;
 /// the [CustomEvent]s.
 _DragInfo _currentDrag;
 
+/// Guard signature
+typedef bool Guard(EventTarget target);
+
 /// The [Draggable] detects drag operations for touch and mouse interactions and
 /// optionally creates a drag avatar for visual feedback of the drag. Event
 /// streams are provided to track touch or mouse dragging:
@@ -52,6 +55,11 @@ class Draggable {
   /// CSS class set to the html body tag during a drag.
   /// See [Draggable] constructor.
   String draggingClassBody;
+
+  /// Function called at the beginning of a drag.
+  /// If it is set and returns false, the dragging
+  /// is not fired.
+  Guard guard;
 
   // -------------------
   // Events
@@ -148,7 +156,8 @@ class Draggable {
       this.handle: null,
       this.cancel: 'input, textarea, button, select, option',
       this.draggingClass: 'dnd-dragging',
-      this.draggingClassBody: 'dnd-drag-occurring'})
+      this.draggingClassBody: 'dnd-drag-occurring',
+      this.guard: null})
       : this._elementOrElementList = elementOrElementList {
     // Detect IE Pointer Event Support.
     JsObject jsWindow = new JsObject.fromBrowserObject(window);
