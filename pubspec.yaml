@@ -1,7 +1,7 @@
-name: dnd_fork_sassospicco
+name: dnd
 version: 0.4.0
 authors:
   - Marco Jakob <majakob@gmx.ch>
   - Stefano Tribioli <tribioli.stefano@gmail.com>
 description: Drag and Drop for Dart web apps with mouse and touch support.
-homepage: https://github.com/sassospicco/dnd/
+homepage: https://github.com/stribioli/dnd/
